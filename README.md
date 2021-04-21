@@ -5,5 +5,5 @@ This is for PowerShell
 
 ````Ruby
 $now = (get-date -F "HH:MM")
-If (( $now -gt "9:00") -and ($now -lt "23:45")) {write 'something'}
+If (( $now -gt "9:00") -and ($now -lt "23:45")) {Write-Ouput "Do something'}
 ````
