@@ -4,6 +4,8 @@ This is for PowerShell
 
 
 ````Ruby
-$now = (get-date -F "HH:MM")
-If (( $now -gt "9:00") -and ($now -lt "23:45")) {Write-Ouput "Do something'}
+    [int]$nowH   = (get-date).Hour
+    [int]$nowM   = (get-date).Minute
+    [double]$now =   -join $nowH + '.'  + $nowM
+    if ($now -gt 9 -and $now -le 17.45) {$speedVariable = 15} else {$speedVariable = 125}
 ````
